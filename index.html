@@ -1,34 +1,137 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="en">
 <head>
-  <title>Taj Indian Restaurant – Okayama</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Taj Indian Restaurant — Okayama | タージ インディアン レストラン 岡山</title>
+  <meta name="description" content="Taj Indian Restaurant — Authentic Indian food near Hokaiin Station, Okayama. タージ：岡山 北院駅そばの本格インド料理店。">
   <style>
-    body {font-family: Arial; margin:0; padding:0;}
-    header {background:#c62828; color:white; padding:20px; text-align:center;}
-    section {padding:20px;}
-    footer {background:#333; color:white; text-align:center; padding:10px;}
+    /* Basic responsive, clean styles */
+    :root{--accent:#c62828;--dark:#222;--muted:#666;--gap:18px}
+    *{box-sizing:border-box}
+    body{font-family:system-ui,-apple-system,Segoe UI,Roboto,"Hiragino Kaku Gothic ProN","メイリオ",Arial;line-height:1.5;margin:0;color:var(--dark)}
+    header{background:var(--accent);color:#fff;padding:20px 16px;text-align:center}
+    .container{max-width:980px;margin:0 auto;padding:18px}
+    nav{display:flex;justify-content:center;gap:14px;flex-wrap:wrap;margin-top:8px}
+    nav a{color:#fff;text-decoration:none;font-weight:600}
+    .hero{display:grid;grid-template-columns:1fr;gap:16px;align-items:center;margin-top:12px}
+    .hero img{width:100%;height:280px;object-fit:cover;border-radius:8px;display:block}
+    h1{font-size:24px;margin:0}
+    .sub{color:#fff;opacity:0.95;margin-top:6px}
+    .split{display:grid;grid-template-columns:1fr 320px;gap:24px}
+    @media(max-width:880px){.split{grid-template-columns:1fr}.hero img{height:200px}}
+    .card{background:#fff;border-radius:8px;padding:14px;box-shadow:0 6px 18px rgba(0,0,0,0.06)}
+    .muted{color:var(--muted)}
+    .menu-list{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}
+    .menu-item{padding:8px;border-bottom:1px dashed #eee}
+    .menu-item b{display:block}
+    .hours, .contact-box{font-weight:600}
+    footer{background:#111;color:#ddd;padding:18px;text-align:center;margin-top:22px;font-size:14px}
+    .btn{display:inline-block;background:var(--accent);color:#fff;padding:10px 14px;border-radius:6px;text-decoration:none;font-weight:700}
+    .gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+    .gallery img{width:100%;height:100px;object-fit:cover;border-radius:6px}
+    @media(max-width:600px){.gallery{grid-template-columns:repeat(2,1fr)}}
+    .map {width:100%;height:260px;border:0;border-radius:8px}
+    .langline{font-size:14px;color:var(--muted);margin-top:6px}
   </style>
 </head>
 <body>
 
 <header>
-  <h1>Taj Indian Restaurant</h1>
-  <p>Authentic Indian Food in Okayama 🍛</p>
+  <div class="container">
+    <h1>Taj Indian Restaurant — タージ インディアン レストラン</h1>
+    <div class="sub">Authentic Indian curry & naan • 岡山 北院駅そば</div>
+    <nav aria-label="Main navigation">
+      <a href="#about">About / 店について</a>
+      <a href="#menu">Menu / メニュー</a>
+      <a href="#gallery">Gallery / ギャラリー</a>
+      <a href="#access">Access / アクセス</a>
+      <a href="#contact">Contact / 連絡先</a>
+    </nav>
+  </div>
 </header>
 
-<section>
-  <h2>About Us</h2>
-  <p>Welcome to Taj Indian Restaurant near Hokaiin Station, Okayama. We serve delicious Indian curry, naan, and tandoori dishes.</p>
-</section>
+<main class="container" style="padding-top:22px">
+  <!-- Hero -->
+  <section class="hero card" aria-label="Hero">
+    <img src="https://images.unsplash.com/photo-1604908177521-a2f2f9b783a1?w=1600&q=60&auto=format&fit=crop" alt="Indian curry and naan">
+    <div>
+      <p style="margin:0"><strong>Welcome to Taj — 岡山の本格インド料理店へようこそ</strong></p>
+      <p class="langline">Fresh naan, tandoori, veg & non-veg curries. / ナン、タンドリーチキン、ベジ・ノンベジカレーを提供します。</p>
+    </div>
+  </section>
 
-<section>
-  <h2>Contact</h2>
-  <p>Okayama, Japan</p>
-</section>
+  <!-- Two-column content -->
+  <section style="margin-top:18px" id="about">
+    <div class="split">
+      <div>
+        <div class="card">
+          <h2>About / 店について</h2>
+          <p>We serve authentic Indian dishes cooked with care. Family friendly & take-out available. / 家族連れ歓迎、テイクアウト可。</p>
+          <p class="muted">Near Hokaiin Station, Okayama. / 北院駅すぐ。</p>
+          <p style="margin-top:12px"><a class="btn" href="tel:+81862521006">Call to reserve • 電話で予約</a></p>
+        </div>
+
+        <div class="card" id="menu" style="margin-top:14px">
+          <h2>Menu Highlights / 人気メニュー</h2>
+          <div class="menu-list">
+            <div class="menu-item"><b>Butter Chicken</b><span class="muted">Rich tomato & butter curry / バターチキン</span></div>
+            <div class="menu-item"><b>Vegetable Curry</b><span class="muted">Seasonal veg / 野菜カレー</span></div>
+            <div class="menu-item"><b>Cheese Naan</b><span class="muted">Fluffy naan with cheese / チーズナン</span></div>
+            <div class="menu-item"><b>Tandoori Chicken</b><span class="muted">Grilled in tandoor / タンドリーチキン</span></div>
+            <div class="menu-item"><b>Set Meal (Lunch)</b><span class="muted">Curry, rice, naan, salad / ランチセット</span></div>
+            <div class="menu-item"><b>Mango Lassi</b><span class="muted">Sweet yogurt drink / マンゴーラッシー</span></div>
+          </div>
+        </div>
+      </div>
+
+      <aside>
+        <div class="card contact-box" id="contact">
+          <h3>Contact / 連絡先</h3>
+          <p><strong>Address / 住所</strong><br>3-12-23 Gakunancho, Kita Ward, Okayama, 700-0011, Japan<br>岡山県岡山市北区学南町3-12-23</p>
+          <p><strong>Phone / 電話</strong><br><a href="tel:+81862521006">+81 86-252-1006</a></p>
+          <p><strong>Hours / 営業時間</strong><br>Lunch 11:30–14:30 / Dinner 17:30–22:00<br>ランチ 11:30–14:30 / ディナー 17:30–22:00</p>
+          <p style="margin-top:8px"><a class="btn" href="mailto:info@tajexample.jp">Email / メールで予約</a></p>
+          <p class="muted" style="margin-top:8px">Walk-ins welcome • テイクアウト対応</p>
+        </div>
+
+        <div class="card" style="margin-top:14px">
+          <h3>Quick Links</h3>
+          <p class="muted">Map, Instagram, Menu PDF — add later. / 地図・SNS・メニューPDFは後で追加できます。</p>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <!-- Gallery -->
+  <section class="card" id="gallery" style="margin-top:18px">
+    <h2>Gallery / ギャラリー</h2>
+    <div class="gallery" aria-hidden="false">
+      <img alt="dish1" src="https://images.unsplash.com/photo-1604908177521-a2f2f9b783a1?w=800&q=60&auto=format&fit=crop">
+      <img alt="dish2" src="https://images.unsplash.com/photo-1600891964599-f61ba0e24092?w=800&q=60&auto=format&fit=crop">
+      <img alt="dish3" src="https://images.unsplash.com/photo-1525755662778-989d0524087e?w=800&q=60&auto=format&fit=crop">
+    </div>
+  </section>
+
+  <!-- Map & Access -->
+  <section class="card" id="access" style="margin-top:18px">
+    <h2>Access / アクセス</h2>
+    <p class="muted">Close to Hokaiin Station • 北院駅すぐ</p>
+
+    <!-- Replace the src below with your Google Maps "Embed" iframe src for exact location -->
+    <div style="margin-top:10px">
+      <!-- Example placeholder: replace src="" with the embed link you get from Google Maps -> Share -> Embed a map -->
+      <iframe class="map" src="" title="Map (replace with Google Maps embed URL)"></iframe>
+      <p class="muted" style="margin-top:8px">How to get an embed link: open Google Maps → find the place → Share → Embed map → copy the src URL and paste into the iframe above. / Google マップで共有 → 埋め込み地図 → src をここに貼ってください。</p>
+    </div>
+  </section>
+</main>
 
 <footer>
-  <p>© 2026 Taj Indian Restaurant</p>
+  <div class="container">
+    <p>&copy; 2026 Taj Indian Restaurant — タージ インディアン レストラン • Okayama</p>
+    <p class="muted">This is an informational site published on GitHub Pages (free). / GitHub Pages で公開された情報サイトです。</p>
+  </div>
 </footer>
 
 </body>
