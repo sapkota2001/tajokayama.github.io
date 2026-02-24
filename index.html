@@ -8,7 +8,7 @@
   <style>
     :root{--accent:#00796b;--dark:#222;--muted:#666;--gap:18px}
     *{box-sizing:border-box}
-    body{font-family:system-ui,-apple-system,Segoe UI,Roboto,"Hiragino Kaku Gothic ProN","メイリオ",Arial;line-height:1.6;margin:0;color:var(--dark);background:#fafafa}
+    body{font-family:system-ui,-apple-system,Segoe UI,Roboto,"Hiragino Kaku Gothic ProN","メイリオ",Arial;line-height:1.5;margin:0;color:var(--dark);background:#fafafa}
     header{background:var(--accent);color:#fff;padding:20px 16px;text-align:center}
     .container{max-width:980px;margin:0 auto;padding:18px}
     nav{display:flex;justify-content:center;gap:14px;flex-wrap:wrap;margin-top:8px}
@@ -41,7 +41,7 @@
   <div class="container">
     <h1>Taj Indian Restaurant — タージ インディアン レストラン</h1>
     <div class="sub">Authentic Indian curry & naan • 岡山 北院駅そば</div>
-    <nav>
+    <nav aria-label="Main navigation">
       <a href="#about">About / 店について</a>
       <a href="#menu">Menu / メニュー</a>
       <a href="#gallery">Gallery / ギャラリー</a>
@@ -53,20 +53,23 @@
 
 <main class="container" style="padding-top:22px">
 
-  <section class="hero card">
+  <!-- Hero -->
+  <section class="hero card" aria-label="Hero">
     <img src="https://images.unsplash.com/photo-1604908177521-a2f2f9b783a1?w=1600&q=60&auto=format&fit=crop" alt="Indian curry and naan">
     <div>
-      <p><strong>Welcome to Taj — 岡山の本格インド料理店へようこそ</strong></p>
+      <p style="margin:0"><strong>Welcome to Taj — 岡山の本格インド料理店へようこそ</strong></p>
       <p class="langline">Fresh naan, tandoori, veg & non-veg curries. / ナン、タンドリーチキン、ベジ・ノンベジカレーを提供します。</p>
     </div>
   </section>
 
+  <!-- Two-column content -->
   <section style="margin-top:18px" id="about">
     <div class="split">
       <div>
         <div class="card">
           <h2>About / 店について</h2>
 
+          <!-- UPDATED ABOUT TEXT -->
           <p>
           タージインド料理学南町店は、10年以上地域に愛され続ける本格インド料理店です。スパイスから手作りのカレー、炭火で焼き上げるナンやタンドリーチキンなど、本場の味を提供しています。
           店内は温かく落ち着いた雰囲気で、家族連れ、学生、仕事帰りの方にも人気。
@@ -87,19 +90,66 @@
           </p>
 
         </div>
+
+        <!-- MENU SECTION (UNCHANGED) -->
+        <div class="card" id="menu" style="margin-top:14px">
+          <h2>Menu Highlights / 人気メニュー</h2>
+          <div class="menu-list">
+            <div class="menu-item"><b>Butter Chicken</b><span class="muted">Rich tomato & butter curry / バターチキン</span></div>
+            <div class="menu-item"><b>Vegetable Curry</b><span class="muted">Seasonal veg / 野菜カレー</span></div>
+            <div class="menu-item"><b>Cheese Naan</b><span class="muted">Fluffy naan with cheese / チーズナン</span></div>
+            <div class="menu-item"><b>Tandoori Chicken</b><span class="muted">Grilled in tandoor / タンドリーチキン</span></div>
+            <div class="menu-item"><b>Set Meal (Lunch)</b><span class="muted">Curry, rice, naan, salad / ランチセット</span></div>
+            <div class="menu-item"><b>Mango Lassi</b><span class="muted">Sweet yogurt drink / マンゴーラッシー</span></div>
+          </div>
+        </div>
       </div>
 
+      <!-- SIDEBAR (UNCHANGED) -->
       <aside>
         <div class="card contact-box" id="contact">
           <h3>Contact / 連絡先</h3>
-          <p><strong>Address / 住所</strong><br>
-          3-12-23 Gakunancho, Kita Ward, Okayama, 700-0011, Japan<br>
-          岡山県岡山市北区学南町3-12-23</p>
+          <p><strong>Address / 住所</strong><br>3-12-23 Gakunancho, Kita Ward, Okayama, 700-0011, Japan<br>岡山県岡山市北区学南町3-12-23</p>
+          <p><strong>Phone / 電話</strong><br><a href="tel:+81862521006">086-252-1006</a></p>
 
-          <p><strong>Phone / 電話</strong><br>
-          <a href="tel:+81862521006">086-252-1006</a></p>
+          <h4 style="margin-top:10px">Hours / 営業時間</h4>
+          <div class="muted">
+            <div class="day-row"><div>Tuesday / 火曜日</div><div>11:00–14:30 • 17:00–21:30</div></div>
+            <div class="day-row"><div>Wednesday / 水曜日</div><div>11:00–14:30 • 17:00–21:30</div></div>
+            <div class="day-row"><div>Thursday / 木曜日</div><div>11:00–14:30 • 17:00–21:30</div></div>
+            <div class="day-row"><div>Friday / 金曜日</div><div>11:00–14:30 • 17:00–21:30</div></div>
+            <div class="day-row"><div>Saturday / 土曜日</div><div>11:00–14:30 • 17:00–21:30</div></div>
+            <div class="day-row"><div>Sunday / 日曜日</div><div>11:00–14:30 • 17:00–21:30</div></div>
+            <div class="day-row"><div>Monday / 月曜日</div><div>11:00–14:30 • 17:00–21:30</div></div>
+          </div>
+
+          <p class="muted" style="margin-top:8px">Walk-ins welcome • テイクアウト対応</p>
+        </div>
+
+        <div class="card" style="margin-top:14px">
+          <h3>Quick Links</h3>
+          <p class="muted">Map, Instagram, Menu PDF — add later. / 地図・SNS・メニューPDFは後で追加できます。</p>
         </div>
       </aside>
+    </div>
+  </section>
+
+  <!-- Gallery -->
+  <section class="card" id="gallery" style="margin-top:18px">
+    <h2>Gallery / ギャラリー</h2>
+    <div class="gallery">
+      <img alt="dish1" src="https://images.unsplash.com/photo-1604908177521-a2f2f9b783a1?w=800&q=60&auto=format&fit=crop">
+      <img alt="dish2" src="https://images.unsplash.com/photo-1600891964599-f61ba0e24092?w=800&q=60&auto=format&fit=crop">
+      <img alt="dish3" src="https://images.unsplash.com/photo-1525755662778-989d0524087e?w=800&q=60&auto=format&fit=crop">
+    </div>
+  </section>
+
+  <!-- Access -->
+  <section class="card" id="access" style="margin-top:18px">
+    <h2>Access / アクセス</h2>
+    <p class="muted">Close to Hokaiin Station • 北院駅すぐ</p>
+    <div style="margin-top:10px">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3282.859664531818!2d133.918919615525!3d34.68347898043963!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x35540608fa2f59f5%3A0xc3f835f8b9e69c4!2s3-ch%C5%8Dme-12-23%20Gakunanch%C5%8D%2C%20Kita%20Ward%2C%20Okayama%2C%20700-0011%2C%20Japan!5e0!3m2!1sen!2sus!4v1708826450000!5m2!1sen!2sus" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
     </div>
   </section>
 
