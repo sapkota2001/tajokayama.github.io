@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Taj Indian Restaurant – Okayama</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {font-family: Arial; margin:0; padding:0;}
+    header {background:#c62828; color:white; padding:20px; text-align:center;}
+    section {padding:20px;}
+    footer {background:#333; color:white; text-align:center; padding:10px;}
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Taj Indian Restaurant</h1>
+  <p>Authentic Indian Food in Okayama 🍛</p>
+</header>
+
+<section>
+  <h2>About Us</h2>
+  <p>Welcome to Taj Indian Restaurant near Hokaiin Station, Okayama. We serve delicious Indian curry, naan, and tandoori dishes.</p>
+</section>
+
+<section>
+  <h2>Contact</h2>
+  <p>Okayama, Japan</p>
+</section>
+
+<footer>
+  <p>© 2026 Taj Indian Restaurant</p>
+</footer>
+
+</body>
+</html>
