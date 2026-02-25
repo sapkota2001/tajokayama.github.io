@@ -6,33 +6,85 @@
   <title>Taj Indian Restaurant — Okayama | タージ インド料理</title>
   <meta name="description" content="Taj Indian Restaurant — Authentic Indian food near Hokaiin Station, Okayama. タージ：岡山 法界院駅そばの本格インド料理店。">
   <style>
-    :root{--accent:#00796b;--dark:#222;--muted:#666;--gap:18px}
-    *{box-sizing:border-box}
-    body{font-family:system-ui,-apple-system,Segoe UI,Roboto,"Hiragino Kaku Gothic ProN","メイリオ",Arial;line-height:1.5;margin:0;color:var(--dark);background:#fafafa}
-    header{background:var(--accent);color:#fff;padding:20px 16px;text-align:center}
-    .container{max-width:980px;margin:0 auto;padding:18px}
-    nav{display:flex;justify-content:center;gap:14px;flex-wrap:wrap;margin-top:8px}
-    nav a{color:#fff;text-decoration:none;font-weight:600}
-    .hero{display:grid;grid-template-columns:1fr;gap:16px;align-items:center;margin-top:12px}
-    .hero img{width:100%;height:280px;object-fit:cover;border-radius:8px;display:block}
-    h1{font-size:24px;margin:0}
-    .sub{color:#fff;opacity:0.95;margin-top:6px}
-    .split{display:grid;grid-template-columns:1fr 320px;gap:24px}
-    @media(max-width:880px){.split{grid-template-columns:1fr}.hero img{height:200px}}
-    .card{background:#fff;border-radius:8px;padding:14px;box-shadow:0 6px 18px rgba(0,0,0,0.06)}
-    .muted{color:var(--muted)}
-    .menu-list{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}
-    .menu-item{padding:8px;border-bottom:1px dashed #eee}
-    .menu-item b{display:block}
-    .hours, .contact-box{font-weight:600}
-    footer{background:#111;color:#ddd;padding:18px;text-align:center;margin-top:22px;font-size:14px}
-    .btn{display:inline-block;background:var(--accent);color:#fff;padding:10px 14px;border-radius:6px;text-decoration:none;font-weight:700}
-    .gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
-    .gallery img{width:100%;height:100px;object-fit:cover;border-radius:6px}
-    @media(max-width:600px){.gallery{grid-template-columns:repeat(2,1fr)}}
-    .map {width:100%;height:260px;border:0;border-radius:8px}
-    .langline{font-size:14px;color:var(--muted);margin-top:6px}
-    .day-row{display:flex;justify-content:space-between;padding:6px 0;border-bottom:1px solid #f0f0f0}
+    /* UPDATED AESTHETIC CSS */
+    :root {
+      --accent: #d35400; /* Warm Spice/Tandoori Orange */
+      --accent-hover: #b84a00;
+      --dark: #2c3e50;
+      --muted: #7f8c8d;
+      --bg: #fffdfa; /* Warm off-white background */
+      --gap: 18px;
+    }
+    * { box-sizing: border-box; }
+    body {
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, "Hiragino Kaku Gothic ProN", "メイリオ", Arial, sans-serif;
+      line-height: 1.6;
+      margin: 0;
+      color: var(--dark);
+      background: var(--bg);
+    }
+    header {
+      background: var(--accent);
+      color: #fff;
+      padding: 24px 16px;
+      text-align: center;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+    .container { max-width: 980px; margin: 0 auto; padding: 18px; }
+    nav { display: flex; justify-content: center; gap: 18px; flex-wrap: wrap; margin-top: 12px; }
+    nav a { 
+      color: #fff; 
+      text-decoration: none; 
+      font-weight: 600; 
+      font-size: 15px;
+      transition: opacity 0.2s ease;
+    }
+    nav a:hover { opacity: 0.8; }
+    .hero { display: grid; grid-template-columns: 1fr; gap: 16px; align-items: center; margin-top: 12px; }
+    .hero img { width: 100%; height: 320px; object-fit: cover; border-radius: 12px; display: block; }
+    h1 { font-size: 28px; margin: 0; letter-spacing: -0.5px; }
+    .sub { color: #fff; opacity: 0.95; margin-top: 6px; font-size: 15px; }
+    .split { display: grid; grid-template-columns: 1fr 320px; gap: 24px; }
+    @media(max-width:880px){ .split{grid-template-columns:1fr} .hero img{height:220px} }
+    .card { 
+      background: #fff; 
+      border-radius: 12px; 
+      padding: 20px; 
+      box-shadow: 0 8px 24px rgba(0,0,0,0.04); 
+      border: 1px solid rgba(0,0,0,0.02);
+    }
+    h2, h3 { color: var(--accent); margin-top: 0; }
+    .muted { color: var(--muted); }
+    .menu-list { display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px; }
+    .menu-item { padding: 10px; border-bottom: 1px dashed #eaeaea; }
+    .menu-item b { display: block; color: var(--dark); font-size: 1.05em; }
+    .hours, .contact-box { font-weight: 600; }
+    footer { background: #1a1a1a; color: #bbb; padding: 24px; text-align: center; margin-top: 32px; font-size: 14px; }
+    
+    /* Beautiful Interactive Button */
+    .btn { 
+      display: inline-block; 
+      background: var(--accent); 
+      color: #fff; 
+      padding: 12px 20px; 
+      border-radius: 8px; 
+      text-decoration: none; 
+      font-weight: 700;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 12px rgba(211, 84, 0, 0.2);
+    }
+    .btn:hover { 
+      background: var(--accent-hover); 
+      transform: translateY(-2px); 
+      box-shadow: 0 6px 16px rgba(211, 84, 0, 0.3);
+    }
+
+    .gallery { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; }
+    .gallery img { width: 100%; height: 100px; object-fit: cover; border-radius: 6px; }
+    @media(max-width:600px){ .gallery{grid-template-columns:repeat(2,1fr)} .menu-list{grid-template-columns:1fr;} }
+    .map { width: 100%; height: 260px; border: 0; border-radius: 8px; }
+    .langline { font-size: 15px; color: var(--muted); margin-top: 8px; }
+    .day-row { display: flex; justify-content: space-between; padding: 8px 0; border-bottom: 1px solid #f5f5f5; font-size: 14px; }
   </style>
 </head>
 <body>
@@ -40,7 +92,7 @@
 <header>
   <div class="container">
     <h1>Taj Indian Restaurant — タージ インド料理</h1>
-    <div class="sub">Authentic Indian curry & naan • 岡山 法界院駅そば</div>
+    <div class="sub">Authentic Indian curry & naan</div>
     <nav aria-label="Main navigation">
       <a href="#about">About / 店について</a>
       <a href="#menu">Menu / メニュー</a>
@@ -56,12 +108,12 @@
   <section class="hero card" aria-label="Hero">
     <img src="IMG_2684.jpg" alt="Taj Indian Restaurant">
     <div>
-      <p style="margin:0"><strong>Welcome to Taj — 岡山の本格インド料理店へようこそ</strong></p>
+      <p style="margin:0; font-size: 1.1em;"><strong>Welcome to Taj — 岡山の本格インド料理店へようこそ</strong></p>
       <p class="langline">Fresh naan, tandoori, veg & non-veg curries. / ナン、タンドリーチキン、ベジ・ノンベジカレーを提供します。</p>
     </div>
   </section>
 
-  <section style="margin-top:18px" id="about">
+  <section style="margin-top:22px" id="about">
     <div class="split">
       <div>
         <div class="card">
@@ -82,13 +134,12 @@
           Takeout is also available, making it convenient for busy customers.
           </p>
 
-          <p style="margin-top:12px">
+          <p style="margin-top:20px">
             <a class="btn" href="tel:+81862521006">Call to reserve • 電話で予約：086-252-1006</a>
           </p>
-
         </div>
 
-        <div class="card" id="menu" style="margin-top:14px">
+        <div class="card" id="menu" style="margin-top:22px">
           <h2>Menu Highlights / 人気メニュー</h2>
           <div class="menu-list">
             <div class="menu-item"><b>Butter Chicken</b><span class="muted">Rich tomato & butter curry / バターチキン</span></div>
@@ -105,9 +156,9 @@
         <div class="card contact-box" id="contact">
           <h3>Contact / 連絡先</h3>
           <p><strong>Address / 住所</strong><br>3-12-23 Gakunancho, Kita Ward, Okayama, 700-0011, Japan<br>岡山県岡山市北区学南町3-12-23</p>
-          <p><strong>Phone / 電話</strong><br><a href="tel:+81862521006">086-252-1006</a></p>
+          <p><strong>Phone / 電話</strong><br><a href="tel:+81862521006" style="color: var(--accent); text-decoration: none;">086-252-1006</a></p>
 
-          <h4 style="margin-top:10px">Hours / 営業時間</h4>
+          <h4 style="margin-top:20px; color: var(--dark);">Hours / 営業時間</h4>
           <div class="muted">
             <div class="day-row"><div>Tuesday / 火曜日</div><div>11:00–14:30 • 17:00–21:30</div></div>
             <div class="day-row"><div>Wednesday / 水曜日</div><div>11:00–14:30 • 17:00–21:30</div></div>
@@ -118,42 +169,37 @@
             <div class="day-row"><div>Monday / 月曜日</div><div>11:00–14:30 • 17:00–21:30</div></div>
           </div>
 
-          <p class="muted" style="margin-top:8px">Walk-ins welcome • テイクアウト対応</p>
-        </div>
-
-        <div class="card" style="margin-top:14px">
-          <h3>Quick Links</h3>
-          <p class="muted">Map, Instagram, Menu PDF — add later. / 地図・SNS・メニューPDFは後で追加できます。</p>
+          <p class="muted" style="margin-top:16px; font-size: 13px;">Walk-ins welcome • テイクアウト対応</p>
         </div>
       </aside>
     </div>
   </section>
 
-  <section class="card" id="gallery" style="margin-top:18px">
+  <section class="card" id="gallery" style="margin-top:22px">
     <h2>Gallery & Menus / ギャラリーとメニュー</h2>
     
     <div style="text-align: center; margin-bottom: 24px;">
-      <img alt="Our Delicious Indian Food" src="IMG_2685.jpg" style="max-width: 50%; height: auto; border-radius: 8px;">
+      <img alt="Our Delicious Indian Food" src="IMG_2685.jpg" style="max-width: 50%; height: auto; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
     </div>
 
     <h3 style="border-top: 1px solid #eee; padding-top: 16px;">Our Menu / メニュー</h3>
     <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 16px;">
-      <img alt="Menu Page 1" src="IMG_2578.jpeg" style="width: 100%; height: auto; border-radius: 6px; border: 1px solid #ddd;">
-      <img alt="Menu Page 2" src="IMG_2579.jpeg" style="width: 100%; height: auto; border-radius: 6px; border: 1px solid #ddd;">
-      <img alt="Menu Page 3" src="IMG_2580.jpeg" style="width: 100%; height: auto; border-radius: 6px; border: 1px solid #ddd;">
-      <img alt="Menu Page 4" src="IMG_2581.jpeg" style="width: 100%; height: auto; border-radius: 6px; border: 1px solid #ddd;">
-      <img alt="Menu Page 5" src="IMG_2582.jpeg" style="width: 100%; height: auto; border-radius: 6px; border: 1px solid #ddd;">
-      <img alt="Menu Page 6" src="IMG_2583.jpeg" style="width: 100%; height: auto; border-radius: 6px; border: 1px solid #ddd;">
-      <img alt="Menu Page 7" src="IMG_2585.jpeg" style="width: 100%; height: auto; border-radius: 6px; border: 1px solid #ddd;">
-      <img alt="Menu Page 8" src="IMG_2586.jpeg" style="width: 100%; height: auto; border-radius: 6px; border: 1px solid #ddd;">
+      <img alt="Menu Page 1" src="IMG_2578.jpeg" style="width: 100%; height: auto; border-radius: 6px; border: 1px solid #ddd; transition: transform 0.2s; cursor: pointer;" onmouseover="this.style.transform='scale(1.02)'" onmouseout="this.style.transform='scale(1)'">
+      <img alt="Menu Page 2" src="IMG_2579.jpeg" style="width: 100%; height: auto; border-radius: 6px; border: 1px solid #ddd; transition: transform 0.2s; cursor: pointer;" onmouseover="this.style.transform='scale(1.02)'" onmouseout="this.style.transform='scale(1)'">
+      <img alt="Menu Page 3" src="IMG_2580.jpeg" style="width: 100%; height: auto; border-radius: 6px; border: 1px solid #ddd; transition: transform 0.2s; cursor: pointer;" onmouseover="this.style.transform='scale(1.02)'" onmouseout="this.style.transform='scale(1)'">
+      <img alt="Menu Page 4" src="IMG_2581.jpeg" style="width: 100%; height: auto; border-radius: 6px; border: 1px solid #ddd; transition: transform 0.2s; cursor: pointer;" onmouseover="this.style.transform='scale(1.02)'" onmouseout="this.style.transform='scale(1)'">
+      <img alt="Menu Page 5" src="IMG_2582.jpeg" style="width: 100%; height: auto; border-radius: 6px; border: 1px solid #ddd; transition: transform 0.2s; cursor: pointer;" onmouseover="this.style.transform='scale(1.02)'" onmouseout="this.style.transform='scale(1)'">
+      <img alt="Menu Page 6" src="IMG_2583.jpeg" style="width: 100%; height: auto; border-radius: 6px; border: 1px solid #ddd; transition: transform 0.2s; cursor: pointer;" onmouseover="this.style.transform='scale(1.02)'" onmouseout="this.style.transform='scale(1)'">
+      <img alt="Menu Page 7" src="IMG_2585.jpeg" style="width: 100%; height: auto; border-radius: 6px; border: 1px solid #ddd; transition: transform 0.2s; cursor: pointer;" onmouseover="this.style.transform='scale(1.02)'" onmouseout="this.style.transform='scale(1)'">
+      <img alt="Menu Page 8" src="IMG_2586.jpeg" style="width: 100%; height: auto; border-radius: 6px; border: 1px solid #ddd; transition: transform 0.2s; cursor: pointer;" onmouseover="this.style.transform='scale(1.02)'" onmouseout="this.style.transform='scale(1)'">
     </div>
   </section>
 
-  <section class="card" id="access" style="margin-top:18px">
+  <section class="card" id="access" style="margin-top:22px">
     <h2>Access / アクセス</h2>
     <p class="muted">Close to Hokaiin Station • 法界院駅すぐ</p>
     <div style="margin-top:10px">
-      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3282.859664531818!2d133.918919615525!3d34.68347898043963!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x35540608fa2f59f5%3A0xc3f835f8b9e69c4!2s3-ch%C5%8Dme-12-23%20Gakunanch%C5%8D%2C%20Kita%20Ward%2C%20Okayama%2C%20700-0011%2C%20Japan!5e0!3m2!1sen!2sus!4v1708826450000!5m2!1sen!2sus" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3282.859664531818!2d133.918919615525!3d34.68347898043963!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x35540608fa2f59f5%3A0xc3f835f8b9e69c4!2s3-ch%C5%8Dme-12-23%20Gakunanch%C5%8D%2C%20Kita%20Ward%2C%20Okayama%2C%20700-0011%2C%20Japan!5e0!3m2!1sen!2sus!4v1708826450000!5m2!1sen!2sus" width="100%" height="450" style="border:0; border-radius: 8px;" allowfullscreen="" loading="lazy"></iframe>
     </div>
   </section>
 
